@@ -9,7 +9,9 @@ var clutter = ""
 var halfValue = splittedText.length/2
 
 splittedText.forEach((e,idx)=>{
-    if(idx < halfValue){
+    if(e === " "){
+        clutter += " "
+    } else if(idx < halfValue){
         // console.log("e")
         clutter += `<span class="a">${e}</span>`
 
@@ -19,7 +21,6 @@ splittedText.forEach((e,idx)=>{
 
     }
 })
-
 h1.innerHTML = clutter
 }
 
